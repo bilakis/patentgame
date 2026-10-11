@@ -1526,8 +1526,15 @@
 
   /* ---------- Başlat ---------- */
   function boot() {
-    if (!Q.length) {
-      app.innerHTML = '<div class="screen title-screen"><p>Soru verisi yüklenemedi.</p></div>';
+    const missing = [
+      ['js/data/questions.js', Q.length],
+      ['js/data/rulebook.js', VK.RULEBOOK],
+      ['js/data/campaign.js', C],
+    ]
+      .filter(([, ok]) => !ok)
+      .map(([f]) => f);
+    if (missing.length) {
+      app.innerHTML = '<div class="screen title-screen"><p>Oyun verisi yüklenemedi. Eksik dosya: ' + VK.esc(missing.join(', ')) + '</p></div>';
       return;
     }
     titleScreen();

@@ -1,6 +1,6 @@
-# Yalnızca oyun dosyaları yayımlansın
-scripts/
-docs/
-data/
-dist/
-README.md
+# Yalnızca oyun dosyaları yayımlansın (baştaki / kökü sabitler)
+/scripts/
+/docs/
+/data/
+/dist/
+/README.md
