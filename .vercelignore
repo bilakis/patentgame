@@ -1,0 +1,6 @@
+# Yalnızca oyun dosyaları yayımlansın
+scripts/
+docs/
+data/
+dist/
+README.md

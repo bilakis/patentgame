@@ -19,7 +19,12 @@ Tek dosyalık çevrimdışı sürüm (CSS, JS ve görseller içine gömülü):
 python3 scripts/build_single.py   # → dist/vekil-masasi.html
 ```
 
-Site tamamen statik olduğu için GitHub Pages'te depo kökünden yayımlanabilir.
+### Yayımlama
+
+Site tamamen statiktir; derleme adımı yoktur.
+
+- **Vercel:** vercel.com → *Add New → Project* → bu depoyu içe aktar. *Framework Preset* "Other" kalsın, *Build Command* ve *Output Directory* boş bırakılsın. Her `git push` otomatik yeniden yayımlanır. `.vercelignore`, betikleri ve ham veriyi yayımın dışında tutar.
+- **GitHub Pages:** *Settings → Pages → Deploy from a branch* → dal ve `/ (root)` seç.
 
 ## Modlar
 
